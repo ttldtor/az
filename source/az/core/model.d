@@ -42,6 +42,10 @@ abstract class Model: Az {
         return row < rowCount(parent) && column < columnCount(parent);
     }
 
+    /**
+     * See QAbstractItemModel::hasChildren. Returns true if parent has any children
+     */
+
     bool hasDerivedIndicies(const ModelIndex parent) const {
         return rowCount(parent) > 0 && columnCount(parent) > 0;
     }
@@ -59,6 +63,16 @@ abstract class Model: Az {
             if(d.hasValue) {
                 result[role] = d;
             }
+        }
+
+        return result;
+    }
+
+    bool setItemData(const ModelIndex index, const Variant[Role] roles) {
+        bool result = true;
+
+        foreach(Role role, Variant value; roles) {
+            result = result && setData(index, value, role);
         }
 
         return result;
