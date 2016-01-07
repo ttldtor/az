@@ -68,7 +68,7 @@ abstract class Model: Az {
         return result;
     }
 
-    bool setItemData(const ModelIndex index, const Variant[Role] roles) {
+    bool setItemData(const ModelIndex index, const(Variant[Role]) roles) {
         bool result = true;
 
         foreach(Role role, Variant value; roles) {
@@ -77,6 +77,57 @@ abstract class Model: Az {
 
         return result;
     }
+
+    bool insertRows(int row, int count, const ModelIndex parent = new ModelIndex()) {
+        return false;
+    }
+
+    bool insertColumns(int column, int count, const ModelIndex parent = new ModelIndex()) {
+        return false;
+    }
+
+    bool removeRows(int row, int count, const ModelIndex parent = new ModelIndex()) {
+        return false;
+    }
+
+    bool removeColumns(int column, int count, const ModelIndex = new ModelIndex()) {
+        return false;
+    }
+
+    bool moveRows(const ModelIndex sourceParent, int sourceRow, int count, const ModelIndex destParent, int destChild) {
+        return false;
+    }
+
+    bool moveColumns(const ModelIndex sourceParent, int sourceColumn, int count, const ModelIndex destParent, int destChild) {
+        return false;
+    }
+
+
+
+    bool insertRow(int row, const ModelIndex parent = new ModelIndex()) {
+        return insertRows(row, 1, parent);
+    }
+
+    bool insertColumn(int column, const ModelIndex parent = new ModelIndex()) {
+        return insertColumns(column, 1, parent);
+    }
+
+    bool removeRow(int row, const ModelIndex parent = new ModelIndex()) {
+        return removeRows(row, 1, parent);
+    }
+
+    bool removeColumn(int column, const ModelIndex parent = new ModelIndex()) {
+        return removeColumns(column, 1, parent);
+    }
+
+    bool moveRow(const ModelIndex sourceParent, int sourceRow, const ModelIndex destParent, int destChild) {
+        return moveRows(sourceParent, sourceRow, 1, destParent, destChild);
+    }
+
+    bool moveColumn(const ModelIndex sourceParent, int sourceColumn, const ModelIndex destParent, int destChild) {
+        return moveColumns(sourceParent, sourceColumn, 1, destParent, destChild);
+    }
+
 
     /+Handlers+/
 
