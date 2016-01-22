@@ -7,6 +7,7 @@ import az.core.role;
 import std.variant;
 import az.core.handler;
 
+/*
 class StringListModel: ListModel {
     private string[] data_;
 
@@ -121,4 +122,4 @@ unittest {
     assert(beginReset && endReset == 2);
     assert(m.rowCount == 1);
 }
-
+*/

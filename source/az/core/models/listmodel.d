@@ -3,6 +3,7 @@
 import az.core.az;
 import az.core.model;
 
+/*
 abstract class ListModel: Model {
     this(Az parent = null) {
         super(parent);
@@ -24,4 +25,5 @@ abstract class ListModel: Model {
         return this.index(row, column);
     }
 }
+*/
 
