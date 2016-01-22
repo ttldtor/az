@@ -3,6 +3,8 @@ module az.core.model;
 import std.variant;
 import std.conv;
 import std.traits;
+import std.format;
+
 
 import az.core.az;
 import az.core.role;
@@ -228,11 +230,9 @@ class ModelIndex: Az {
     }
 
     override string toString() const {
-        import std.format: format;
-
         return format("ModelIndex [row = %s, column = %s, model = %s]", row_, column_, &model_);
     }
-}
+};
 
 unittest {
     assert(new ModelIndex().isValid == false);
