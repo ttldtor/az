@@ -1,0 +1,9 @@
+{
+    "name": "az",
+    "version": "0.1.0",
+    "description": "A core + gui (and tui) library",
+    "authors": ["ttldtor <ttldtor@gmail.com>", "newlifer"],
+    "license": "Boost Software License - Version 1.0",
+    "targetType": "library",
+    "homepage": "https://github.com/ttldtor/az/wiki"
+}

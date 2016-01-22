@@ -1,6 +1,0 @@
-name "az"
-version "0.1"
-description "A core + gui (and tui) library"
-authors "ttldtor <ttldtor@gmail.com>" "newlifer"
-targetType "library"
-homepage "https://github.com/ttldtor/az/wiki"
