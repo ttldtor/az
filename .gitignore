@@ -5,3 +5,5 @@ __dummy.html
 *.obj
 *.sln
 *.visualdproj
+*.suo
+*.lib
