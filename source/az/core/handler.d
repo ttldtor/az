@@ -8,8 +8,6 @@ class Handler(Ts...) {
     
     Delegates delegates_;
     
-    this() {}
-    
     void opCall(Ts args) {
         foreach (_, d; delegates_) {
             d(args);
